@@ -35,7 +35,9 @@ export default function FilterGroup({ title, options, selected, setSelected }) {
             <div className="grid grid-cols-5 gap-2">
                 <button className={`flex-1 py-2 px-2 rounded-xl text-sm font-bold transition-all shadow-lg shadow-amber-800/20 
                                        ${selected.length === 0 ? "bg-amber-800 text-white" : "bg-stone-50 text-stone-400 hover:bg-stone-100"}`
-                }>Todos</button>
+                        }
+                        onClick={() => setSelected([])}
+                >Todos</button>
                 {options.map((option) => (
                     <button
                         key={option}

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import data from "../data/groups.json";
 import FilterGroup from "./FilterGroup.jsx";
 import RatingFilter from "./RatingFilter.jsx";
@@ -10,6 +10,11 @@ export default function FiltersApp() {
     const [type, setType] = useState([]);
     const [price, setPrice] = useState([]);
     const [rating, setRating] = useState(0);
+    const [filtered, setFiltered] = useState([]);
+
+    useEffect(() => {
+        console.log(filtered);
+    }, [filtered]);
 
     const typeMap = {
         "Restaurante": "restaurantes",
@@ -34,27 +39,33 @@ export default function FiltersApp() {
         console.log("Tipo:", type);
         console.log("Precio:", price);
         console.log("Rating:", rating);
-        // setShowResult(true);
-        setView("roulette");
-        sortSelection();
+
+        setView("roulette"); 
+        setFiltered(sortSelection());        
     }
 
     const sortSelection = () => {
+        let selectedGroup;
+        let filtered;
         if (type.length === 0) {
             // si no hay filtro, devolver todos los locales unidos
-            return Object.values(data).flat();
+            filtered = Object.values(data).flat();
+        } else {
+            selectedGroup = type.map(t => typeMap[t]);
+            filtered = selectedGroup.flatMap(groupKey => {
+                return data[groupKey] || [];
+            })
         }
-        const selectedGroup = type.map(t => typeMap[t]);
-        let filtered = selectedGroup.flatMap(groupKey => {
-            return data[groupKey] || [];
-        })
+
+
         if (price.length > 0) {
             filtered = filtered.filter(place => price.includes(place.price || place.price === "Desconocido"));
         }
         if (rating > 0) {
             filtered = filtered.filter(place => place.score >= ratingThreshold[rating]);
         }
-        console.log(filtered);
+        return filtered;
+
     }
     return (
         <div className="flex flex-col ">
@@ -99,6 +110,7 @@ export default function FiltersApp() {
                 <>
                     <Roulette
                         setView={setView}
+                        filtered={filtered}
                     />
                 </>
             )}
