@@ -67,6 +67,7 @@ export default function Result({ place }) {
 
                     <div className="mt-12 flex flex-col sm:flex-row gap-4">
                         <button
+                            onClick={() => window.location.reload()}
                             className="px-10 py-5 rounded-2xl bg-stone-100 text-stone-600 font-bold hover:bg-stone-200 transition-all transform active:scale-95"
                         >
                             Nuevo Sorteo
