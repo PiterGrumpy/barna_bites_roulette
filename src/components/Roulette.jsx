@@ -1,5 +1,5 @@
 import { useRef, useEffect } from "react";
-export default function Roulette({ setView, filtered }) {
+export default function Roulette({ setView, filtered, setPlace }) {
     const listRef = useRef(null);
     useEffect(() => {
         const list = listRef.current;
@@ -8,6 +8,7 @@ export default function Roulette({ setView, filtered }) {
         let position = 0;
         const totalHeight = list.scrollHeight / 2; // altura de una lista completa
         let animationId;
+        setPlace(filtered[Math.floor(Math.random() * filtered.length)]);
 
         function animate() {
             position -= 8;

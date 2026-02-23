@@ -11,6 +11,7 @@ export default function FiltersApp() {
     const [price, setPrice] = useState([]);
     const [rating, setRating] = useState(0);
     const [filtered, setFiltered] = useState([]);
+    const [place, setPlace] = useState(null);
 
     useEffect(() => {
         console.log(filtered);
@@ -110,6 +111,7 @@ export default function FiltersApp() {
                 <>
                     <Roulette
                         setView={setView}
+                        setPlace={setPlace}
                         filtered={filtered}
                     />
                 </>
@@ -117,7 +119,9 @@ export default function FiltersApp() {
 
             {view === "result" && (
                 <>
-                    <Result />
+                    <Result
+                        place={place}
+                    />
                 </>
             )}
 
