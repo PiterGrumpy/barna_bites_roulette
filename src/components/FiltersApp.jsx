@@ -41,8 +41,8 @@ export default function FiltersApp() {
         console.log("Precio:", price);
         console.log("Rating:", rating);
 
-        setView("roulette"); 
-        setFiltered(sortSelection());        
+        setView("roulette");
+        setFiltered(sortSelection());
     }
 
     const sortSelection = () => {
@@ -69,62 +69,74 @@ export default function FiltersApp() {
 
     }
     return (
-        <div className="flex flex-col ">
-            {view === "filters" && (
-                <>
-                    <FilterGroup
-                        title="Tipo de local"
-                        options={[
-                            "Restaurante",
-                            "Bar",
-                            "Cafetería",
-                            "Churrería",
-                            "Panadería",
-                            "Tapas",
-                            "Chiringuito",
-                            "Taberna y Vino",
-                            "Pub y Coctelería",
-                        ]}
-                        selected={type}
-                        setSelected={setType}
-                    />
-                    <FilterGroup
-                        title="Precio"
-                        options={["€", "€€", "€€€", "€€€€"]}
-                        selected={price}
-                        setSelected={setPrice}
-                    />
-                    <RatingFilter
-                        rating={rating}
-                        setRating={setRating}
-                    />
-                    <button
-                        className="mt-10 self-center px-12 py-5 rounded-2xl text-xl font-bold
+        <>
+            <div
+                className="bg-neutral-primary-soft rounded-lg w-full h-3/4 m-5 p-5 bg-amber-50"
+                style={{ boxShadow: "0 25px 50px rgba(0,0,0,0.7)" }}
+            >
+                <h2 class="text-center mb-5 font-serif italic">
+                    <span class="text-2xl">⚡</span>¿Dónde quiere ir hoy?
+                </h2>
+                <div className="flex flex-col ">
+                    {view === "filters" && (
+                        <>
+                            <FilterGroup
+                                title="Tipo de local"
+                                options={[
+                                    "Restaurante",
+                                    "Bar",
+                                    "Cafetería",
+                                    "Churrería",
+                                    "Panadería",
+                                    "Tapas",
+                                    "Chiringuito",
+                                    "Taberna y Vino",
+                                    "Pub y Coctelería",
+                                ]}
+                                selected={type}
+                                setSelected={setType}
+                            />
+                            <FilterGroup
+                                title="Precio"
+                                options={["€", "€€", "€€€", "€€€€"]}
+                                selected={price}
+                                setSelected={setPrice}
+                            />
+                            <RatingFilter
+                                rating={rating}
+                                setRating={setRating}
+                            />
+                            <button
+                                className="mt-10 self-center px-12 py-5 rounded-2xl text-xl font-bold
                                     active:scale-95 bg-amber-800 text-white
                                     shadow-2xl shadow-amber-800/30 hover:bg-amber-900 hover:-translate-y-1"
-                        onClick={() => handleRandomPick()}
-                    >¡Lanzar Sorteo! 🎲
-                    </button>
-                </>
-            )}
-            {view === "roulette" && (
-                <>
-                    <Roulette
-                        setView={setView}
-                        setPlace={setPlace}
-                        filtered={filtered}
-                    />
-                </>
-            )}
+                                onClick={() => handleRandomPick()}
+                            >¡Lanzar Sorteo! 🎲
+                            </button>
+                        </>
+                    )}
+                    {view === "roulette" && (
+                        <>
+                            <Roulette
+                                setView={setView}
+                                setPlace={setPlace}
+                                filtered={filtered}
+                            />
+                        </>
+                    )}
 
-            {view === "result" && (
-                <>
-                    <Result
-                        place={place}
-                    />
-                </>
-            )}
+                    {view === "result" && (
+                        <>
+                            <Result
+                                place={place}
+                            />
+                        </>
+                    )}
 
-        </div>
+                </div>
+            </div>
+
+
+        </>
     );
 }

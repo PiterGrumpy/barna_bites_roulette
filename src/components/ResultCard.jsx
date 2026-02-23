@@ -1,7 +1,7 @@
 export default function Result({ place }) {
     return (
         <div className="w-full animate-in zoom-in-95 fade-in duration-500">
-            <div className="bg-white rounded-[3rem] shadow-[0_32px_64px_-16px_rgba(0,0,0,0.1)] overflow-hidden border border-stone-100 flex flex-col md:flex-row min-h-[500px]">
+            <div className="bg-white rounded-[3rem] shadow-[0_32px_64px_-16px_rgba(0,0,0,0.1)] overflow-hidden border border-stone-100 flex flex-col md:flex-row min-h-125">
                 {/* Image Section */}
                 <div className="md:w-[45%] bg-stone-100 relative group overflow-hidden">
                     <img
@@ -9,7 +9,7 @@ export default function Result({ place }) {
                         alt={place.title}
                         className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-stone-900/60 to-transparent opacity-60" />
+                    <div className="absolute inset-0 bg-linear-to-t from-stone-900/60 to-transparent opacity-60" />
                     <div className="absolute bottom-8 left-8">
                         <span className="bg-amber-800 text-white text-[10px] uppercase font-black tracking-[0.2em] px-4 py-2 rounded-full">
                             Resultado Final
@@ -34,7 +34,7 @@ export default function Result({ place }) {
                                     {place.title}
                                 </h2>
                             </div>
-                            <div className="flex flex-col items-center p-4 bg-amber-50 rounded-2xl border border-amber-100 min-w-[70px]">
+                            <div className="flex flex-col items-center p-4 bg-amber-50 rounded-2xl border border-amber-100 min-w-17.5">
                                 <span className="text-amber-500 text-2xl">★</span>
                                 <span className="text-stone-900 font-bold text-xl leading-none mt-1">{place.score}</span>
                             </div>

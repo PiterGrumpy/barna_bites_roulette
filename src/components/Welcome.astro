@@ -1,12 +1,12 @@
 ---
-import FilterCard from "./FilterCard.astro"
+import FiltersApp from "./FiltersApp.jsx";
 ---
 
 <div id="container">
 	<main>
 		<section id="hero" class="flex flex-col items-center justify-center min-h-screen">
 			<h1 class="text-5xl font-bold modak-regular text-amber-800 text-center mt-16 text-shadow-md text-shadow-black">BarnaBiteRoulette</h1>
-			<FilterCard />
+			<FiltersApp client:load />
 		</section>
 	</main>
 </div>
