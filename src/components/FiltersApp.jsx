@@ -70,16 +70,18 @@ export default function FiltersApp() {
     }
     return (
         <>
-            <div
-                className="bg-neutral-primary-soft rounded-lg w-full h-3/4 m-5 p-5 bg-amber-50"
-                style={{ boxShadow: "0 25px 50px rgba(0,0,0,0.7)" }}
-            >
-                <h2 class="text-center mb-5 font-serif italic">
-                    <span class="text-2xl">⚡</span>¿Dónde quiere ir hoy?
-                </h2>
-                <div className="flex flex-col ">
-                    {view === "filters" && (
-                        <>
+
+
+            {view === "filters" && (
+                <>
+                    <div
+                        className="bg-neutral-primary-soft rounded-lg w-full h-3/4 m-5 p-5 bg-amber-50"
+                        style={{ boxShadow: "0 25px 50px rgba(0,0,0,0.7)" }}
+                    >
+                        <h2 class="text-center mb-5 font-serif italic">
+                            <span class="text-2xl">⚡</span>¿Dónde quiere ir hoy?
+                        </h2>
+                        <div className="flex flex-col ">
                             <FilterGroup
                                 title="Tipo de local"
                                 options={[
@@ -113,28 +115,29 @@ export default function FiltersApp() {
                                 onClick={() => handleRandomPick()}
                             >¡Lanzar Sorteo! 🎲
                             </button>
-                        </>
-                    )}
-                    {view === "roulette" && (
-                        <>
-                            <Roulette
-                                setView={setView}
-                                setPlace={setPlace}
-                                filtered={filtered}
-                            />
-                        </>
-                    )}
+                        </div>
+                    </div>
+                </>
+            )}
+            {view === "roulette" && (
+                <>
+                    <Roulette
+                        setView={setView}
+                        setPlace={setPlace}
+                        filtered={filtered}
+                    />
+                </>
+            )}
 
-                    {view === "result" && (
-                        <>
-                            <Result
-                                place={place}
-                            />
-                        </>
-                    )}
+            {view === "result" && (
+                <>
+                    <Result
+                        place={place}
+                    />
+                </>
+            )}
 
-                </div>
-            </div>
+
 
 
         </>

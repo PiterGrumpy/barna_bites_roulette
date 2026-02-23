@@ -5,7 +5,7 @@ import FiltersApp from "./FiltersApp.jsx";
 <div id="container">
 	<main>
 		<section id="hero" class="flex flex-col items-center justify-center min-h-screen">
-			<h1 class="text-5xl font-bold modak-regular text-amber-800 text-center mt-16 text-shadow-md text-shadow-black">BarnaBiteRoulette</h1>
+			<h1 class="text-5xl font-bold modak-regular text-amber-800 text-center mt-10 text-shadow-md text-shadow-black">BarnaBiteRoulette</h1>
 			<FiltersApp client:load />
 		</section>
 	</main>
@@ -13,12 +13,17 @@ import FiltersApp from "./FiltersApp.jsx";
 
 <style>
 
+	body{
+		background: #fde4c8;
+		
+	}
 	#container {
 		font-family:
 			Inter, Roboto, "Helvetica Neue", "Arial Nova", "Nimbus Sans", Arial,
 			sans-serif;
 		height: 100%;
-		background: #fde4c8;
+		padding-bottom: 50px;
+		
 	}
 
 	main {
