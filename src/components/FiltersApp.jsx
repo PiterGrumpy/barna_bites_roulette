@@ -18,6 +18,22 @@ export default function FiltersApp() {
         console.log(filtered);
     }, [filtered]);
 
+    useEffect(() => {
+        
+        if (view === "result") {
+            // Espera a que el DOM pinte
+            setTimeout(() => {
+                console.log(document.getElementById("hero").scrollHeight);
+                console.log(document.getElementById("hero").clientHeight);
+                const hero = document.getElementById("hero");
+                hero?.scrollTo({
+                    top: hero.scrollHeight,
+                    behavior: "smooth",
+                });
+            }, 50);
+        }
+    }, [view]);
+
     const typeMap = {
         "Restaurante": "restaurantes",
         "Bar": "bares",
