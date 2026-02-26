@@ -30,10 +30,6 @@ export default function Roulette({ setView, filtered, setPlace }) {
             clearTimeout(stopTimeOut);
         } 
     }, [filtered]);
-    const handleResult = () => {
-        setView("result");
-        console.log(view);
-    }
     return (
         <>
             <div className="my-3 flex flex-col">
@@ -59,14 +55,6 @@ export default function Roulette({ setView, filtered, setPlace }) {
                 <div className="text-center">
                     <p className="text-stone-400 text-sm mt-4">Filtrado por tus preferencias</p>
                 </div>
-
-                {/* <button
-                className="mt-10 self-center px-12 py-5 rounded-2xl text-xl font-bold
-                                    active:scale-95 bg-amber-800 text-white
-                                    shadow-2xl shadow-amber-800/30 hover:bg-amber-900 hover:-translate-y-1"
-                onClick={() => handleResult()}
-            >¡Mostrar Resultado! 🎲
-            </button> */}
             </div>
         </>
     )

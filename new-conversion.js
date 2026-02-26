@@ -1,5 +1,5 @@
 import fs from "fs";
-import data from "./src/data/new-dataset.js";
+import data from "./src/data/churrerias.js";
 
 const simplified = data.map(r => ({
     "title": r.title,

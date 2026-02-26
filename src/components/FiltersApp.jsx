@@ -88,7 +88,7 @@ export default function FiltersApp() {
                                     "Bar",
                                     "Cafetería",
                                     "Tapas",
-                                    "Chiringuito",
+                                    "Churrería",
                                     "Taberna y Vino",
                                     "Pub y Coctelería",
                                 ]}
