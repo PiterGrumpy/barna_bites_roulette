@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import data from "../data/groups.json";
 import FilterGroup from "./FilterGroup.jsx";
 import FilterPrice from "./FilterPrice.jsx";
@@ -18,19 +18,11 @@ export default function FiltersApp() {
         console.log(filtered);
     }, [filtered]);
 
+    const ref = useRef(null);
+
     useEffect(() => {
-        
         if (view === "result") {
-            // Espera a que el DOM pinte
-            setTimeout(() => {
-                console.log(document.getElementById("hero").scrollHeight);
-                console.log(document.getElementById("hero").clientHeight);
-                const hero = document.getElementById("hero");
-                hero?.scrollTo({
-                    top: hero.scrollHeight,
-                    behavior: "smooth",
-                });
-            }, 50);
+            ref.current?.scrollIntoView({ behavior: "smooth", block: "end" });
         }
     }, [view]);
 
@@ -143,11 +135,11 @@ export default function FiltersApp() {
             )}
 
             {view === "result" && (
-                <>
+                <div ref={ref}>
                     <Result
                         place={place}
                     />
-                </>
+                </div>
             )}
 
 
