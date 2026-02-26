@@ -74,7 +74,7 @@ export default function FiltersApp() {
             {view === "filters" && (
                 <>
                     <div
-                        className="bg-neutral-primary-soft rounded-lg w-full h-3/4 m-5 p-5 bg-amber-50"
+                        className="rounded-lg w-full max-w-2xl p-8 bg-amber-50"
                         style={{ boxShadow: "0 25px 50px rgba(0,0,0,0.7)" }}
                     >
                         <h2 className="text-center mb-5 font-serif italic">
