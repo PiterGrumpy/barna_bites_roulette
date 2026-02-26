@@ -1,4 +1,15 @@
+import { useEffect, useRef } from "react";
 export default function Result({ place }) {
+    const containerRef = useRef(null);
+
+    useEffect(() => {
+        setTimeout(() => {
+            containerRef.current?.scrollIntoView({
+                behavior: "smooth",
+                block: "end"
+            });
+        }, 100);
+    }, []);
     return (
         <div className="max-w-3xl animate-in zoom-in-95 fade-in duration-500">
             <div className="bg-white rounded-[3rem] shadow-[0_32px_64px_-16px_rgba(0,0,0,0.1)] overflow-hidden border border-stone-100 flex flex-col md:flex-row min-h-125">
@@ -76,7 +87,7 @@ export default function Result({ place }) {
                             onClick={() => window.open(`${place.url}`)}
                             className="flex-1 px-10 py-5 rounded-2xl bg-amber-800 text-white font-bold hover:bg-amber-900 shadow-xl shadow-amber-800/30 transition-all transform active:scale-95 flex items-center justify-center gap-3"
                         >
-                            <span>Abrir Mapa</span>
+                            <span ref={containerRef}>Abrir Mapa</span>
                             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
                         </button>
                     </div>
