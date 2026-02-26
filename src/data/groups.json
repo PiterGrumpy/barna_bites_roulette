@@ -5946,7 +5946,7 @@
     {
       "title": "Chiringuito Bambú",
       "price": "€€",
-      "category": "Bar",
+      "category": "Chiringuito",
       "generic": "Bar",
       "street": "Platja Llevant, Av. del Litoral, s/n",
       "website": "https://www.somosdeplaya.com/",
@@ -5954,6 +5954,16 @@
       "score": 4.2,
       "url": "https://www.google.com/maps/search/?api=1&query=Chiringuito%20Bamb%C3%BA&query_place_id=ChIJMX2QT1yjpBIREx9k1X4y4TE",
       "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwerH5h9HZCe9V7w3C31QUPDU-VKyqbWYf9Dbjzixi0DdjxLP1XA7Zrn6R7KEpPVlDl90onJDBXfUHpVh0wG88SZGvQHF8_Oz7oJDssWBvbZHTAtWtK5majbO9j-mvN13KoYPwio=w426-h240-k-no"
+    },
+    {
+      "title": "Chiringuito Caribe Bella Mar",
+      "price": "€€",
+      "category": "Chiringuito",
+      "generic": "Bar",
+      "street": "Playa de la Nova Mar Bella",
+      "score": 3.2,
+      "url": "https://www.google.com/maps/search/?api=1&query=Chiringuito%20Caribe%20Bella%20Mar&query_place_id=ChIJneqQuyOjpBIRbCwZsH7MKGQ",
+      "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwerm9VnLCwPM5Aq_QICPvKlfSSf7c5n3NvMcvvfrfyrn3iqjYM5bFEtnoVNOoDsLFMn4WeUY2toanydLzxFpj0oqG3cqyO0rcG9aqf33KhuXwqSb66UG2yr35LbrstIMraBTvMkf=w408-h544-k-no"
     },
     {
       "title": "Cuadro Restaurante Barcelona",
@@ -9572,7 +9582,7 @@
       "imageUrl": "https://lh3.googleusercontent.com/p/AF1QipP9O08Nuaim8m3SkLL4MAelPaM34Eums7GgWFVC=w408-h306-k-no"
     },
     {
-      "title": ".paradero specialty coffee & brunch",
+      "title": "Paradero specialty coffee & brunch",
       "price": "€€",
       "category": "Cafetería",
       "generic": "Cafetería",
@@ -9582,6 +9592,18 @@
       "score": 4.7,
       "url": "https://www.google.com/maps/search/?api=1&query=.paradero%20specialty%20coffee%20%26%20brunch&query_place_id=ChIJA9YMGGKipBIRVovpcGDBL3w",
       "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwerPkJ4hV7kR7B48kFQucCgFh_cWXdlVRGgi1126F2PENiG6cJwYrWv4_RpJ89jAz5mGQpa-OddbEDzSzbSUdnbT71uXlxDbEdOoQQBc0cVG5F2bzFaRflhbkopUVo1zjLjpqDHNiA=w408-h544-k-no"
+    },
+    {
+      "title": "El Molí Pan y Café - Zona Franca",
+      "price": "€",
+      "category": "Panadería",
+      "generic": "Cafetería",
+      "street": "Carrer de la Mare de Déu de Port, 251",
+      "website": "http://elmolipanycafe.com/",
+      "phone": "+34 931 09 69 99",
+      "score": 4.3,
+      "url": "https://www.google.com/maps/search/?api=1&query=El%20Mol%C3%AD%20Pan%20y%20Caf%C3%A9%20-%20Zona%20Franca&query_place_id=ChIJm9Oyzr-ZpBIR2WVnO3MQjLU",
+      "imageUrl": "https://lh3.googleusercontent.com/p/AF1QipNg68cISqbm16bNP2bFJ_QOa9nwVWJphUF8P4pI=w408-h306-k-no"
     },
     {
       "title": "La Mala - Guatemala Specialty Coffee",
@@ -11072,32 +11094,6 @@
       "score": 3.1,
       "url": "https://www.google.com/maps/search/?api=1&query=Caf%C3%A9%20del%20Sol&query_place_id=ChIJG_OgRnuipBIRbfLVCyO5fYo",
       "imageUrl": "https://lh3.googleusercontent.com/p/AF1QipPKNhxCfJdlwJKlzm8rp4Iw4-6uBPGHvrDPYtxG=w408-h306-k-no"
-    }
-  ],
-  "panaderias": [
-    {
-      "title": "El Molí Pan y Café - Zona Franca",
-      "price": "€",
-      "category": "Panadería",
-      "generic": "Panadería",
-      "street": "Carrer de la Mare de Déu de Port, 251",
-      "website": "http://elmolipanycafe.com/",
-      "phone": "+34 931 09 69 99",
-      "score": 4.3,
-      "url": "https://www.google.com/maps/search/?api=1&query=El%20Mol%C3%AD%20Pan%20y%20Caf%C3%A9%20-%20Zona%20Franca&query_place_id=ChIJm9Oyzr-ZpBIR2WVnO3MQjLU",
-      "imageUrl": "https://lh3.googleusercontent.com/p/AF1QipNg68cISqbm16bNP2bFJ_QOa9nwVWJphUF8P4pI=w408-h306-k-no"
-    }
-  ],
-  "chiringuitos": [
-    {
-      "title": "Chiringuito Caribe Bella Mar",
-      "price": "€€",
-      "category": "Chiringuito",
-      "generic": "Chiringuito",
-      "street": "Playa de la Nova Mar Bella",
-      "score": 3.2,
-      "url": "https://www.google.com/maps/search/?api=1&query=Chiringuito%20Caribe%20Bella%20Mar&query_place_id=ChIJneqQuyOjpBIRbCwZsH7MKGQ",
-      "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwerm9VnLCwPM5Aq_QICPvKlfSSf7c5n3NvMcvvfrfyrn3iqjYM5bFEtnoVNOoDsLFMn4WeUY2toanydLzxFpj0oqG3cqyO0rcG9aqf33KhuXwqSb66UG2yr35LbrstIMraBTvMkf=w408-h544-k-no"
     }
   ],
   "taberna_vinos": [

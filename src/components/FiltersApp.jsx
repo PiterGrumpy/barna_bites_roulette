@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import data from "../data/groups.json";
 import FilterGroup from "./FilterGroup.jsx";
+import FilterPrice from "./FilterPrice.jsx";
 import RatingFilter from "./RatingFilter.jsx";
 import Roulette from "./Roulette.jsx";
 import Result from "./ResultCard.jsx";
@@ -23,8 +24,6 @@ export default function FiltersApp() {
         "Cafetería": "cafeterias",
         "Churrería": "churrerias",
         "Tapas": "tapas",
-        "Panadería": "panaderias",
-        "Chiringuito": "chiringuitos",
         "Taberna y Vino": "taberna_vinos",
         "Pub y Coctelería": "pub_cocteles",
     };
@@ -78,8 +77,8 @@ export default function FiltersApp() {
                         className="bg-neutral-primary-soft rounded-lg w-full h-3/4 m-5 p-5 bg-amber-50"
                         style={{ boxShadow: "0 25px 50px rgba(0,0,0,0.7)" }}
                     >
-                        <h2 class="text-center mb-5 font-serif italic">
-                            <span class="text-2xl">⚡</span>¿Dónde quiere ir hoy?
+                        <h2 className="text-center mb-5 font-serif italic">
+                            <span className="text-2xl">⚡</span>¿Dónde quiere ir hoy?
                         </h2>
                         <div className="flex flex-col ">
                             <FilterGroup
@@ -88,8 +87,6 @@ export default function FiltersApp() {
                                     "Restaurante",
                                     "Bar",
                                     "Cafetería",
-                                    "Churrería",
-                                    "Panadería",
                                     "Tapas",
                                     "Chiringuito",
                                     "Taberna y Vino",
@@ -98,7 +95,7 @@ export default function FiltersApp() {
                                 selected={type}
                                 setSelected={setType}
                             />
-                            <FilterGroup
+                            <FilterPrice
                                 title="Precio"
                                 options={["€", "€€", "€€€", "€€€€"]}
                                 selected={price}
