@@ -22,7 +22,7 @@ export default function FilterGroup({ title, options, selected, setSelected }) {
                         <button
                             key={option}
                             onClick={() => handleClick(option)}
-                            className={`flex-1 py-2 px-2 rounded-xl text-xs sm:text-sm md:text-base transition-all shadow-lg shadow-amber-800/20 
+                            className={`py-2 px-3 rounded-xl text-xs sm:text-sm md:text-base transition-all shadow-lg shadow-amber-800/20 
                                        ${selected.includes(option) ? "bg-amber-800 text-white" : "bg-stone-50 text-stone-400 hover:bg-stone-100"}`
                             }>
                             {option}

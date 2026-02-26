@@ -84,10 +84,10 @@ export default function FiltersApp() {
                             <FilterGroup
                                 title="Tipo de local"
                                 options={[
-                                    "Restaurante",
                                     "Bar",
                                     "Cafetería",
                                     "Tapas",
+                                    "Restaurante",
                                     "Churrería",
                                     "Taberna y Vino",
                                     "Pub y Coctelería",
