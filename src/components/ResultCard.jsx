@@ -1,6 +1,6 @@
 export default function Result({ place }) {
     return (
-        <div className="w-full animate-in zoom-in-95 fade-in duration-500">
+        <div className="max-w-3xl animate-in zoom-in-95 fade-in duration-500">
             <div className="bg-white rounded-[3rem] shadow-[0_32px_64px_-16px_rgba(0,0,0,0.1)] overflow-hidden border border-stone-100 flex flex-col md:flex-row min-h-125">
                 {/* Image Section */}
                 <div className="md:w-[45%] bg-stone-100 relative group overflow-hidden">
